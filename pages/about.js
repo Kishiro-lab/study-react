@@ -48,6 +48,9 @@ export default function Home() {
             height={37}
             priority
           />
+          <h2 className={inter.className}>
+              about <span>-&gt;</span>
+            </h2>
           <div className={styles.thirteen}>
             <Image
               src="/thirteen.svg"
