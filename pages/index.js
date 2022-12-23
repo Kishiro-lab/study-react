@@ -3,7 +3,6 @@ import styles from '../styles/Home.module.css'
 import { Footer } from "../components/Footer"
 import { Header } from "../components/Header"
 
-
 export default function Home() {
   return (
     <>
@@ -14,13 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <Header />
-        </div>
+        <Header page="index"/>
         <div className={styles.center}>
           <h1> Index Page </h1>
         </div>

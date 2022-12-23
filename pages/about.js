@@ -13,13 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/about.js</code>
-          </p>
-          <Header />
-        </div>
+        <Header page="about"/>
         <div className={styles.center}>
           <h1> About Page </h1>
         </div>
