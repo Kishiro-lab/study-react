@@ -5,9 +5,10 @@ export function Header(props) {
   return (
     <div className={styles.description}>
       <p>
-        Get started by editing&nbsp;
-        <code className={styles.code}>pages/{props.page}.js</code>
+        Get started by editing{" "}
+        {props.children}&nbsp;
       </p>
+      <button onClick={props.onClick}>ボタン</button>
       <div>
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
