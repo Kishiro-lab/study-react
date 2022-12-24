@@ -78,6 +78,7 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
+  text-transform: capitalize;
 }
 
 .center::before {
@@ -196,6 +197,7 @@
 
   .center {
     padding: 8rem 0 6rem;
+    text-transform: capitalize;
   }
 
   .center::before {

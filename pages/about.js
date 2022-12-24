@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Footer } from "../components/Footer"
 import { Header } from '../components/Header'
+import { Center } from "../components/Center"
+import { Footer } from "../components/Footer"
 
 export default function Home() {
   return (
@@ -14,9 +15,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Header page="about"/>
-        <div className={styles.center}>
-          <h1> About Page </h1>
-        </div>
+        <Center page="about"/>
         <Footer />
       </main>
     </>
