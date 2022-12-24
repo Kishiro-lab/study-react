@@ -1,14 +1,13 @@
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import classes from './Header.module.css'
 
 export function Header(props) {
   return (
-    <div className={styles.description}>
+    <div className={classes.description}>
       <p>
         Get started by editing{" "}
         {props.children}&nbsp;
       </p>
-      <button onClick={props.onClick}>ボタン</button>
       <div>
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -19,7 +18,7 @@ export function Header(props) {
         <Image
           src="/vercel.svg"
           alt="Vercel Logo"
-          className={styles.vercelLogo}
+          className={classes.vercelLogo}
           width={100}
           height={24}
           priority

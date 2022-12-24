@@ -1,8 +1,8 @@
-import styles from '../styles/Home.module.css'
+import classes from './Center.module.css'
 
 export function Center(props) {
   return (
-        <div className={styles.center}>
+        <div className={classes.center}>
           <h1> {props.page} page </h1>
         </div>
   )
