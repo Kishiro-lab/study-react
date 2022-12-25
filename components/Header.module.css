@@ -17,7 +17,8 @@
   gap: 0.5rem;
 }
 
-.description p {
+.pageLinks p,
+.getStarted {
   position: relative;
   margin: 0;
   padding: 1rem;
@@ -26,7 +27,7 @@
   border-radius: var(--border-radius);
 }
 
-.description div {
+.pageLinks {
   display: flex;
   gap: 0.5rem;
 }
@@ -55,15 +56,15 @@
     padding: 1rem;
   }
 
-  .description p,
-  .description div {
+  .getStarted,
+  .byVercel {
     display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
   }
 
-  .description p {
+  .getStarted {
     align-items: center;
     inset: 0 0 auto;
     padding: 2rem 1rem 1.4rem;

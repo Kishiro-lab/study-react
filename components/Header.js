@@ -5,11 +5,11 @@ import classes from './Header.module.css'
 export function Header(props) {
   return (
     <div className={classes.description}>
-      <p>
+      <p className={classes.getStarted}>
         Get started by editing{" "}
         {props.children}&nbsp;
       </p>
-      <div>
+      <div className={classes.pageLinks}>
         <p>
           <Link href="/" className={classes.pageLink}>Index</Link>
         </p>
