@@ -10,7 +10,7 @@
   font-family: var(--font-mono);
 }
 
-.description a {
+.byVercel a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,15 +32,11 @@
   gap: 0.5rem;
 }
 
-.pageLink {
-  border-bottom: 1px solid black;
-}
 
 .pageLink:hover,
 .pageLink:focus,
 .pageLink:active {
   color: #0070f3;
-  border-bottom: 1px solid #0070f3;
 }
 
 
@@ -80,6 +76,13 @@
     backdrop-filter: blur(24px);
   }
 
+  .pageLinks {
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    width: 100%;
+  }
+  
   .byVercel {
     align-items: flex-end;
     pointer-events: none;
