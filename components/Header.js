@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from 'next/image'
 import classes from './Header.module.css'
 
@@ -9,6 +10,14 @@ export function Header(props) {
         {props.children}&nbsp;
       </p>
       <div>
+        <p>
+          <Link href="/" className={classes.pageLink}>Index</Link>
+        </p>
+        <p>
+          <Link href="/about" className={classes.pageLink}>About</Link>
+        </p>
+      </div>
+      <div className={classes.byVercel}>
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         target="_blank"
