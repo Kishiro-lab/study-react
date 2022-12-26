@@ -17,7 +17,7 @@
 
 .card span {
   display: inline-block;
-  transition: transform 200ms;
+  transition: transform 1000ms;
 }
 
 .card h2 {
@@ -42,7 +42,7 @@
   }
 
   .card:hover span {
-    transform: translateX(4px);
+    transform: translateX(15px);
   }
 }
 
