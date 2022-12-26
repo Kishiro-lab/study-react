@@ -1,7 +1,7 @@
-import classes from './Main.module.css'
-import { Header } from "../components/Header"
-import { Center } from "../components/Center"
-import { Footer } from "../components/Footer"
+import classes from 'src/components/Main/Main.module.css'
+import { Header } from "src/components/Header"
+import { Center } from "src/components/Center"
+import { Footer } from 'src/components/Footer'
 
 export function Main(props) {
   return (

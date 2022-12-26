@@ -1,4 +1,4 @@
-import classes from './Center.module.css'
+import classes from 'src/components/Center/Center.module.css'
 
 export function Center(props) {
   return (
