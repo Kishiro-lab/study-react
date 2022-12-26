@@ -6,7 +6,7 @@ export function Header(props) {
   return (
     <div className={classes.description}>
       <p className={classes.getStarted}>
-        Get started by editing{" "}
+        Get started by editing&nbsp;
         {props.children}&nbsp;
       </p>
       <div className={classes.pageLinks}>
