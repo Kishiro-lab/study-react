@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { Main } from 'src/components/Main'
 
 export default function Home() {
@@ -9,6 +9,15 @@ export default function Home() {
     console.log(e.target.href);
     e.preventDefault();
     alert(foo);
+  }, []);
+
+  useEffect(() => {
+    console.log("mount");
+    document.body.style.backgroundColor = "lightblue";
+    return () => {
+      console.log("unmount");
+      document.body.style.backgroundColor = "";
+    };
   }, []);
 
   return (
