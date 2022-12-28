@@ -1,5 +1,7 @@
+import classes from "src/styles/Home.module.css"
 import Head from 'next/head'
 import { Main } from 'src/components/Main'
+import { Footer } from "src/components/Footer"
 
 export default function Home() {
   return (
@@ -7,7 +9,10 @@ export default function Home() {
       <Head>
         <title>About Page</title>
       </Head>
-      <Main page="about" />
+      <div className={classes.all}>
+        <Main page="about" />
+        <Footer />
+      </div>
     </>
   )
 }
