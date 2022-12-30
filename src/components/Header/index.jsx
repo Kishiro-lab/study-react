@@ -6,8 +6,8 @@ export function Header(props) {
   return (
     <div className={classes.description}>
       <p className={classes.getStarted}>
-        Get started by editing&nbsp;
-        {props.children}&nbsp;
+        アイテムの数は&nbsp;
+        {props.children}&nbsp;個です
       </p>
       <div className={classes.pageLinks}>
         <p>

@@ -1,10 +1,43 @@
 import classes from "src/styles/Home.module.css"
+import { useCallback, useState } from 'react';
 import Head from 'next/head'
 import { Main } from 'src/components/Main'
 import { Footer } from "src/components/Footer"
 
+const ITEMS = [
+  { 
+    href: "https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+    title: "Docs",
+    description: "Find in-depth information about Next.js features and&nbsp;API."
+  },
+  { 
+    href: "https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+    title: "Learn",
+    description: "Learn about Next.js in an interactive course with&nbsp;quizzes!"
+  },
+  { 
+    href: "https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+    title: "Templates",
+    description: "Discover and deploy boilerplate example Next.js&nbsp;projects."
+  },
+  { 
+    href: "https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app",
+    title: "Deploy",
+    description: "Instantly deploy your Next.js site to a shareable URL with&nbsp;Vercel."
+  }, 
+]
+
 export default function About(props) {
   const { count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd } = props;
+
+  const [items, setItems] = useState(ITEMS);
+
+  const handleReduce = useCallback(() => {
+    setItems((prevItems) => {
+      return prevItems.slice(0, prevItems.length - 1);
+    });
+
+  }, []);
   
   return (
     <>
@@ -12,7 +45,7 @@ export default function About(props) {
         <title>About Page</title>
       </Head>
       <div className={classes.all}>
-        <Main page="about" />
+        <Main items={items} />
         <div className={classes.practice}>
 
           <button onClick={handleClick}>カウント</button>
@@ -27,8 +60,11 @@ export default function About(props) {
             })}
           </ul>
 
+          <button onClick={handleReduce}>減らす</button>
+          
+
         </div>
-        <Footer />
+        <Footer items={items}/>
       </div>
     </>
   )

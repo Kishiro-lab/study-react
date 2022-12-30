@@ -16,3 +16,4 @@ export const useCounter = () => {
  
   return { count, isShow, handleClick, handleDisplay };
 };
+

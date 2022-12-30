@@ -6,7 +6,7 @@ export function Main(props) {
   return (
       <main className={classes.main}>
         <Header>
-          {<code className={classes.code}>pages/{props.page}.js</code>}
+          {<code className={classes.code}>{props.items.length}</code>}
         </Header>
         <Center page={props.page}/> 
       </main>
