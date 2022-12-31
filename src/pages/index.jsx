@@ -45,7 +45,7 @@ export default function Home({ count, isShow, handleClick, handleDisplay, text, 
         <title>Index Page</title>
       </Head>
       <div className={classes.all}>
-        <Main items={items} />
+        <Main page="index" items={items} />
         <div className={classes.practice}>
 
           {isShow ? <h1>{count}</h1> : null}

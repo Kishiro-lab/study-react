@@ -28,7 +28,7 @@ const ITEMS = [
 ]
 
 export default function About(props) {
-  const { count, isShow, handleClick, handleDisplay, text, array, handleChange, handleAdd } = props;
+  const { isShow, doubleCount, handleClick, handleDisplay, text, array, handleChange, handleAdd } = props;
 
   const [items, setItems] = useState(ITEMS);
 
@@ -45,12 +45,12 @@ export default function About(props) {
         <title>About Page</title>
       </Head>
       <div className={classes.all}>
-        <Main items={items} />
+        <Main page="about" items={items} />
         <div className={classes.practice}>
 
           <button onClick={handleClick}>カウント</button>
           <button onClick={handleDisplay}>{isShow ? "非表示" : "表示"}</button>
-          {isShow ? <h2>{count}</h2> : null}
+          {isShow ? <h2>{doubleCount}</h2> : null}
 
           <input type="text" value={text} onChange={ handleChange } />
           <button onClick={handleAdd}>追加</button>
