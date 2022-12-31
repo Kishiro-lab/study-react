@@ -6,20 +6,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 
-export function Footer({items}) {
-
+export const Footer = (props) => {
   return (
-    
     <div className={classes.grid}>
-      
-      {items.map((item) => {
+
+      {props.items.map((item) => {
         return (
           <a
-          key={item.href}
-          href={item.href}
-          className={classes.card}
-          target="_blank"
-          rel="noopener noreferrer"
+            key={item.href}
+            href={item.href}
+            className={classes.card}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
               {item.title} <span>-&gt;</span>

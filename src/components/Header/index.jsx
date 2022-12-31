@@ -2,7 +2,12 @@ import Link from "next/link";
 import Image from 'next/image'
 import classes from 'src/components/Header/Header.module.css'
 
-export function Header(props) {
+const NAV_ITEMS = [
+  { href: "/", label: "Index" },
+  { href: "/about", label: "About" },
+];
+
+export const Header = (props) => {
   return (
     <div className={classes.description}>
       <p className={classes.getStarted}>
@@ -10,12 +15,11 @@ export function Header(props) {
         {props.children}&nbsp;個です
       </p>
       <div className={classes.pageLinks}>
-        <p>
-          <Link href="/" className={classes.pageLink}>Index</Link>
-        </p>
-        <p>
-          <Link href="/about" className={classes.pageLink}>About</Link>
-        </p>
+        {NAV_ITEMS.map((item) => {
+          return (
+            <p key={item.href}><Link href={item.href} className={classes.pageLink}>{item.label}</Link></p>
+          )
+        })}
       </div>
       <div className={classes.byVercel}>
       <a

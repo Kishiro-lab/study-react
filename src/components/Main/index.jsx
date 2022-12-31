@@ -2,7 +2,7 @@ import classes from 'src/components/Main/Main.module.css'
 import { Header } from "src/components/Header"
 import { Center } from "src/components/Center"
 
-export function Main(props) {
+export const Main = (props) => {
   return (
       <main className={classes.main}>
         <Header>
